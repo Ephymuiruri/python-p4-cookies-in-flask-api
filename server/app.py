@@ -17,8 +17,7 @@ def show_session(key):
             'session_value': session[key],
             'session_accessed': session.accessed,
         },
-        'cookies': [{cookie: request.cookies[cookie]}
-            for cookie in request.cookies],
+        'cookies': [{cookie: request.cookies[cookie]}for cookie in request.cookies],
     }), 200)
 
     response.set_cookie('mouse', 'Cookie')
